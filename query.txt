@@ -1,0 +1,21 @@
+sudo systemctl start mysql
+
+// kill frontend 
+ps aux | grep -i apt
+sudo kill 
+
+// gcc
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90 --slave /usr/bin/g++ g++ /usr/bin/g++-9 --slave /usr/bin/gcov gcov /usr/bin/gcov-9
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 80 --slave /usr/bin/g++ g++ /usr/bin/g++-8 --slave /usr/bin/gcov gcov /usr/bin/gcov-8
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 --slave /usr/bin/g++ g++ /usr/bin/g++-7 --slave /usr/bin/gcov gcov /usr/bin/gcov-7
+sudo update-alternatives --config gcc
+
+// libcap
+http://www.programmersought.com/article/17521294320/
+
+// setup tar.gz
+tar zxvf PACKAGE.tar.gz
+
+// fix NTFS only Read 
+sudo fdisk -l
+sudo ntfsfix /dev/sda3
