@@ -19,3 +19,24 @@ tar zxvf PACKAGE.tar.gz
 // fix NTFS only Read 
 sudo fdisk -l
 sudo ntfsfix /dev/sda3
+
+// set permission folder app 
+sudo chmod 777 -R <your_app_name_directory>
+
+// fix error lib start 
+$ sudo apt install glibc-source
+$ cd /usr/src/glibc
+$ sudo tar xvf glibc-2.27.tar.xz
+
+"sourceFileMap": {
+    "/build/glibc-OTsEL5": "/usr/src/glibc"
+},
+
+// check systemctl
+systemctl list-units --type=service --state=running 
+
+// sudo rm -rf
+
+// set permision 1 sourceFileMap
+sudo chmod u=rwx,g=rwx,o=rwx (u = user, g = group, o = other)
+
